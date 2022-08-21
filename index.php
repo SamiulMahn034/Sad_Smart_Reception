@@ -16,9 +16,9 @@
    <div class="row">
    <div class="col-md-12">
       <div>
-      <span style="font-size:65px;font-weight:bold">WELCOME TO </span>
+      <span style="font-size:45px;">WELCOME TO </span>
       <br>
-      <span style="font-size:65px;font-weight:bold">UNITED INTERNATIONAL UNIVERSITY</span>
+      <span style="font-size:70px;font-weight:bold">UNITED INTERNATIONAL UNIVERSITY</span>
        <br>
        <span style="font-size:50px;color:black;font-weight:bold;">e-reception</span>
       </div>
