@@ -13,25 +13,37 @@
 <body style="background-image: linear-gradient(to right ,#fc604f , #f08d20);">
     <br><br>
     <div  style="display:flex; flex-direction:row; height:800px; width:1800px; padding-left:80px; ">
-       
-            <img src="canteen direction.png" style="width:50%;" alt="">
-       
-        <div style=" display:flex; flex-direction:column; align-items: center; h3background-color:white
-      " class="container" >
-      <br><br><br><br><br><br><br><br>
-                <h2>Which place are you looking for?</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                <br><br><br><br><br><br>
+                <img src="imeges/map.png" style="width:100%;" alt="">
+                </div>
+                <div class="col-md-6 col-12">
+                <br><br><br><br><br><br><br><br>
+                <div style=" display:flex; flex-direction:column; align-items: center; h3background-color:white
+                    "  >
+                     <h2>Which place are you looking for?</h2>
             <hr>
             
             <input type="text" class="rounded-pill" style="width:300px;" placeholder="Search">
             <br>
-            <button class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Admission Office</button>
+            <a href="direction_read.php" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Admission Office</a>
+
             <br>
-            <button class=" btn rounded-pill btn-dark shadow fw-bold" style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">CSE Department</button>
+            <a href="direction_library.php?Room_Name=Library" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Library</a>
             <br>
-            <a href=""><button class=" btn rounded-pill btn-dark shadow fw-bold" style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Canteen</button></a>
+            <a href="direction_canteen.php?Room_Name=Canteen" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Canteen</a>
+            <br>
             <br><br><br><br>
             <a href="index.php"><button class=" btn rounded-pill btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;">Back</button></a>
+                    </div>
+               
+                </div>
+            </div>
         </div>
-    </div>
+            
+       
+   
 </body>
 </html>
