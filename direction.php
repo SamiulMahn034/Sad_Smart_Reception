@@ -1,4 +1,6 @@
-<?php include "header.php" ?>
+<?php
+session_start();
+include "header.php" ?>
 <?php include "navber.php" ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,9 +14,24 @@
 </head>
 <body style="background-image: linear-gradient(to right ,#fc604f , #f08d20);">
     <br><br>
-    <div  style="display:flex; flex-direction:row; height:800px; width:1800px; padding-left:80px; ">
+   
         <div class="container">
+  
             <div class="row">
+            <?php
+        if(isset($_SESSION['status'])){
+                        ?>
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                                <div>
+                                <?php echo'<h4>'.$_SESSION['status']. '</h4>'?>
+                                </div>
+                                </div>
+                        
+                        <?php 
+                        unset($_SESSION['status']);
+                      }
+                    ?>
                 <div class="col-md-6 col-12">
                 <br><br><br><br><br><br>
                 <img src="imeges/map.png" style="width:100%;" alt="">
@@ -26,14 +43,30 @@
                      <h2>Which place are you looking for?</h2>
             <hr>
             
-            <input type="text" class="rounded-pill" style="width:300px;" placeholder="Search">
+         
+            
+            <center>
+            
+            <div class="input-group" style="margin-left:20px;" >
+           
+            <form action="direction_search.php" method="POST">
+                <input type="text" placeholder="Search" name="RN" class="rounded-pill w-5" style="width:250px;">
+                <button  type="submit" style="" name="submit"class="btn btn-dark rounded-pill" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                 
+            </form>
+                    
+                    </div>
+                    
+            </center>
+
+            
             <br>
-            <a href="direction_read.php" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Admission Office</a>
+            <a href="direction_read.php?Room_Name=Admission" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Admission Office</a>
 
             <br>
-            <a href="direction_library.php?Room_Name=Library" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Library</a>
+            <a href="direction_read.php?Room_Name=Library" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Library</a>
             <br>
-            <a href="direction_canteen.php?Room_Name=Canteen" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Canteen</a>
+            <a href="direction_read.php?Room_Name=Canteen" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Canteen</a>
             <br>
             <br><br><br><br>
             <a href="index.php"><button class=" btn rounded-pill btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;">Back</button></a>
@@ -44,6 +77,6 @@
         </div>
             
        
-   
+        <script src="https://kit.fontawesome.com/fb3db3fea9.js" crossorigin="anonymous"></script>
 </body>
 </html>

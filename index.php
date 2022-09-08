@@ -33,7 +33,10 @@
               </span>
               </div>
               <div style="padding-top:20px;">
+              <a href="members.php">
               <button class=" btn rounded-pill btn-light shadow fw-bold" style="color:#fc614f; width:80%; height:60px;  font-size:25px;"> Get Appointment</button>
+              </a>
+
               </div>
           </div>
     </div>
@@ -64,9 +67,7 @@
         </div>
     </div>
     </div>
-    <div style="background-color:black;margin-top:350px;" class="container-fluid ">
-    <center><h1>https://www.uiu.ac.bd/</h1></center>
-  </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

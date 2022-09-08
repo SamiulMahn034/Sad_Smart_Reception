@@ -1,10 +1,16 @@
-<?php include "header.php" ?>
+<?php 
+session_start();
+include "header.php" ?>
 <?php include "navber.php" ?>
 <?php 
 
 $conn = mysqli_connect('localhost','root','','smart reception');
 
+if(!$conn){
+    echo mysqli_connect_error();
+  }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,25 +22,27 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <title>Get a smart direction</title>
 </head>
 <body style="background-image: linear-gradient(to right ,#fc604f , #f08d20);">
-<!-- <?php
-                    // if (isset($_GET['Room_Name'])){
-                    //     $Room_Name= $_GET['Room_Name'];
-                    //     $sql= "SELECT * FROM direction WHERE Room_Name=$Room_Name";
-                    //     $data = mysqli_query($conn, $sql);
-                    //     $check_result= mysqli_num_rows($data)> 0;
-                    //     if($check_result){
-                    //       while( $rows = mysqli_fetch_array( $data ) ) 
-                    //       {
+
+    <br><br>
+   
+        <div class="container">
+        <?php
+                    if (isset($_POST['submit'])){
+                        
+                        $Room_Name= $_POST['RN'];
+                        $sql= "SELECT * FROM direction WHERE Room_Name LIKE '%".$Room_Name."%'";
+                        $data = mysqli_query($conn, $sql);
+                        $check_result= mysqli_num_rows($data)> 0;
+                        if($check_result){
+                          while( $rows = mysqli_fetch_array( $data ) ) 
+                          {
                             
                     
-                    ?> -->
-    <br><br>
-    <div  style="display:flex; flex-direction:row; height:800px; width:1800px; padding-left:80px; ">
-        <div class="container">
+                    ?>
             <div class="row">
                 <div class="col-md-6 col-12">
                 <br><br><br><br><br><br>
-                <img src="imeges/library.png" style="width:100%;" alt="">
+                <img src="imeges/<?php echo $rows ['Map'] ?>" style="width:100%;" alt="">
                 </div>
                 <div class="col-md-6 col-12">
                 <br><br><br><br><br><br><br><br>
@@ -45,10 +53,10 @@ $conn = mysqli_connect('localhost','root','','smart reception');
             
             <input type="text" class="rounded-pill" style="width:300px;" placeholder="Search">
             <br>
-                <h1>Library</h1>
+                <h1><?php echo $rows ['Room_Name'] ?></h1>
 
             <br>
-<h3>Go about 60 steps forward from the entrance and turn left You'll find the library</h3>
+                <h3><?php echo $rows ['Direction'] ?></h3>
             <br>
         
             <br><br><br><br>
@@ -57,14 +65,24 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                
                 </div>
             </div>
-        </div>
-        <?php
-//                           }}}
-//         else{
-//         die("Can not execute query");
-//         }
-// ?>     
        
-    
+        <?php
+                          }
+
+                          } else{
+                            $_SESSION['status']="Please try again!";
+                            header("Location: ./direction.php");
+                          }
+                  
+                    }
+        else{
+           
+         echo "Can not execute query";
+        }
+?>  
+
+
+       
+       <script src="https://kit.fontawesome.com/fb3db3fea9.js" crossorigin="anonymous"></script> 
 </body>
 </html>
