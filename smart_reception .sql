@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2022 at 05:07 PM
+-- Generation Time: Sep 09, 2022 at 07:08 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.15
 
@@ -59,12 +59,20 @@ CREATE TABLE `appoinment` (
 
 CREATE TABLE `direction` (
   `ID` int(100) NOT NULL,
-  `Room Name` varchar(1000) NOT NULL,
-  `Room Number` varchar(1000) NOT NULL,
+  `Room_Name` varchar(1000) NOT NULL,
+  `Room_Number` text NOT NULL,
   `Direction` varchar(1000) NOT NULL,
-  `Map` blob NOT NULL,
-  `Voice` varchar(1000) NOT NULL
+  `Map` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `direction`
+--
+
+INSERT INTO `direction` (`ID`, `Room_Name`, `Room_Number`, `Direction`, `Map`) VALUES
+(2, 'Canteen', '000', 'Go few steps forward from the entrance and turn right\nwalk about 40 steps and then turn left. You\'ll find the canteen.', 'map.png'),
+(3, 'Admission ', '000', 'Go few steps forward from the entrance and turn left You\'ll find the admission\n office', 'Admission office.png'),
+(4, 'Library', '000', 'Go about 60 steps forward from the entrance and turn left You\'ll find the library', 'library.png');
 
 -- --------------------------------------------------------
 
@@ -74,14 +82,33 @@ CREATE TABLE `direction` (
 
 CREATE TABLE `faculty/member` (
   `id` int(11) NOT NULL,
-  `Name` int(11) NOT NULL,
-  `Dept` int(11) NOT NULL,
-  `Phone Number` int(11) NOT NULL,
-  `Category` int(11) NOT NULL,
-  `Schedule` int(11) NOT NULL,
-  `User Name` int(11) NOT NULL,
-  `Password` int(11) NOT NULL
+  `image` varchar(100) NOT NULL,
+  `Name` varchar(100) NOT NULL,
+  `Dept` varchar(100) NOT NULL,
+  `Room_Number` varchar(100) NOT NULL,
+  `Phone_Number` varchar(100) NOT NULL,
+  `Category` varchar(100) NOT NULL,
+  `Slot_1` varchar(100) NOT NULL DEFAULT 'N/A',
+  `Slot_2` varchar(100) NOT NULL DEFAULT 'N/A',
+  `Slot_3` varchar(100) NOT NULL DEFAULT 'N/A',
+  `User_Name` varchar(100) NOT NULL,
+  `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `faculty/member`
+--
+
+INSERT INTO `faculty/member` (`id`, `image`, `Name`, `Dept`, `Room_Number`, `Phone_Number`, `Category`, `Slot_1`, `Slot_2`, `Slot_3`, `User_Name`, `Password`) VALUES
+(3, '1.jpg', 'Hasan Sarwar', 'CSE', '401', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'hsn', '1234'),
+(4, '2.jpg', 'HUDA, MOHAMMAD NURUL, Ph.D.', 'CSE', '403', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'HUDA', '1234'),
+(5, '5.jpg', 'ISLAM, A.K.M. MUZAHIDUL, Ph.D.', 'CSE', '402', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'Islam', '12324'),
+(6, '9.jpg', 'ELAHI, MOHAMMAD MAMUN', 'CSE', '701', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'ELAHI', '1234'),
+(7, '10.jpg', 'Suman Ahmed', 'CSE', '1012', '01xxxxxxxxxxx', 'Asst. Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'AHMED', '1234'),
+(8, '13.jpg', 'ALAM, INTEKHAB, Ph.D.', 'EEE', '501', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'ALAM', '1234'),
+(9, '14.jpg', 'RAHMAN, KALED MASUKUR, Ph.D.', 'EEE', '504', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'KMR', '1234'),
+(10, '16.jpg', 'ZAMAN, ABU SALEH MD. SOHEL-UZ-, Ph.D.', 'BBA', '201', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'ZAMAN', '1234'),
+(11, '17.jpg', 'AHMED, HASNAN, Ph.D.', 'BBA', '205', '01xxxxxxxxxxx', 'Professor', 'Sat,Tue(08:00am-10:00am)(02:00pm-04:00pm)', 'Mon(08:00am-10:00am)(11:00pm-04:00pm)', 'Sun,Wed(09:00am-11:00am)(01:00pm-03:00pm)', 'HA', '1234');
 
 -- --------------------------------------------------------
 
@@ -143,6 +170,12 @@ ALTER TABLE `direction`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `faculty/member`
+--
+ALTER TABLE `faculty/member`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `faq`
 --
 ALTER TABLE `faq`
@@ -180,7 +213,13 @@ ALTER TABLE `appoinment`
 -- AUTO_INCREMENT for table `direction`
 --
 ALTER TABLE `direction`
-  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `faculty/member`
+--
+ALTER TABLE `faculty/member`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `faq`
