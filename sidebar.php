@@ -7,7 +7,7 @@
     <title>Get an appoinment</title>
 </head>
 <body>
-<div style="margin-top:400px; width:400px;" class="container">
+<div style="margin-top:400px; " class="container">
     <div class="input-group mb-3">
     <button class="btn btn-light dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">Department</button>
     <ul class="dropdown-menu">

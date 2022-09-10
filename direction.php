@@ -50,7 +50,7 @@ include "header.php" ?>
             <div class="input-group" style="margin-left:20px;" >
            
             <form action="direction_search.php" method="POST">
-                <input type="text" placeholder="Search" name="RN" class="rounded-pill w-5" style="width:250px;">
+                <input type="text" placeholder="Search" name="RN" class="rounded-pill w-5" style="width:250px;" required>
                 <button  type="submit" style="" name="submit"class="btn btn-dark rounded-pill" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
                  
             </form>

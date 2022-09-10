@@ -39,12 +39,26 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                 </div>
                 <div class="col-md-6 col-12">
                 <br><br><br><br><br><br><br><br>
-                <div style=" display:flex; flex-direction:column; align-items: center; h3background-color:white
+                <div style=" display:flex; flex-direction:column; align-items: center;
                     "  >
                      <h2>Which place are you looking for?</h2>
             <hr>
             
-            <input type="text" class="rounded-pill" style="width:300px;" placeholder="Search">
+            
+            <center>
+            
+            <div class="input-group" style="margin-left:20px;" >
+           
+            <form action="direction_search.php" method="POST">
+                <input type="text" placeholder="Search" name="RN" class="rounded-pill w-5" style="width:250px;" required>
+                <button  type="submit" style="" name="submit"class="btn btn-dark rounded-pill" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                 
+            </form>
+                    
+                    </div>
+                    
+            </center>
+
             <br>
                 <h1><?php echo $rows ['Room_Name'] ?></h1>
 
@@ -69,7 +83,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
         }
 ?>  
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
        
        <script src="https://kit.fontawesome.com/fb3db3fea9.js" crossorigin="anonymous"></script> 
 </body>

@@ -50,8 +50,20 @@ if(!$conn){
                     "  >
                      <h2>Which place are you looking for?</h2>
             <hr>
+            <center>
             
-            <input type="text" class="rounded-pill" style="width:300px;" placeholder="Search">
+            <div class="input-group" style="margin-left:20px;" >
+           
+            <form action="direction_search.php" method="POST">
+                <input type="text" placeholder="Search" name="RN" class="rounded-pill w-5" style="width:250px;" required>
+                <button  type="submit" style="" name="submit"class="btn btn-dark rounded-pill" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                 
+            </form>
+                    
+                    </div>
+                    
+            </center>
+
             <br>
                 <h1><?php echo $rows ['Room_Name'] ?></h1>
 

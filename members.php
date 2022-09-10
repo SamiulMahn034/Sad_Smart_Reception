@@ -12,18 +12,19 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get an appoinment</title>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
 </head>
 <body>
     <div class="row">    
       <div class="col-md-3" style="background-image: linear-gradient(to right ,#fc604f , #f08d20); height:920px;">
             <?php include "sidebar.php" ?>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-9">
   
-      <div class="container slider">
+      <div class="container slider" style="margin-top:100px;">
                   <?php 
 
-                $sql ="SELECT image, Name,Dept,Category from `faculty/member` ";
+                $sql ="SELECT id, image, Name,Dept,Category from `faculty/member` ";
                 $data = mysqli_query($conn, $sql);
                 $check_result= mysqli_num_rows($data)> 0;
                 if($check_result){
@@ -31,12 +32,14 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                   {
                       ?>
 
-                  <div class="card" style="width:14rem; padding:10px; color:white; margin-left:50px;">
+                  <div class="card" style="width:14rem;  margin-left:50px;">
 
-                  <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-top" style="height:300px; border-radius:500px;" alt="...">
-                  <div class="card-body">
+                 <center><a href="apnt.php?id=<?php echo $rows ['id']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:150px;width:100px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
+                  <div class="card-body" style="color:black;text-align:center;">
 
-                            <span><?php echo $rows ['Dept']?></span> - <span><br>
+                            <span><?php echo $rows ['Dept']?></span>
+                            <br>
+                            <span>
                             <?php echo $rows ['Category']?></span>
                   </div>
 
@@ -47,7 +50,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
 }
 else{
   ?>	
-<h2  style="color:white;font-size:35px;">Product currently not available.</h2> 
+<h2  style="color:white;font-size:35px;">Datas are  currently not available.</h2> 
 <?php
 }
 ?>	
@@ -70,11 +73,14 @@ else{
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript">
           $('.slider').slick({
-  dots: true,
+  dots: false,
   infinite: false,
   speed: 300,
   slidesToShow: 4,
   slidesToScroll: 4,
+  slidesToScroll: 4,
+ 
+  adaptiveHeight:true,
   responsive: [
     {
       breakpoint: 1024,
