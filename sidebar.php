@@ -6,32 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get an appoinment</title>
 </head>
-<body>
-<div style="margin-top:400px; " class="container">
+<body >
+<div >
+<div style="margin-top:300px; " class="container">
+<h3>Get your own choice</h3>
     <div class="input-group mb-3">
+    
     <button class="btn btn-light dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">Department</button>
     <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">CSE</a></li>
-        <li><a class="dropdown-item" href="#">EEE</a></li>
-        <li><a class="dropdown-item" href="#">BBA</a></li>
-        <li><a class="dropdown-item" href="#">Civil</a></li>
+        <li><a class="dropdown-item" href="member_sort.php?Dept=CSE">CSE</a></li>
+        <li><a class="dropdown-item" href="member_sort.php?Dept=EEE">EEE</a></li>
+        <li><a class="dropdown-item" href="member_sort.php?Dept=BBA">BBA</a></li>
+        <li><a class="dropdown-item" href="member_sort.php?Dept=Civil">Civil</a></li>
+        <li><a class="dropdown-item" href="members.php">All</a></li>
         
     
     </ul>
-    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+    
+ 
     </div>
     <div class="input-group mb-3">
     <button class="btn btn-light dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">Faculty</button>
     <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Lecturer</a></li>
-        <li><a class="dropdown-item" href="#">Proffessor</a></li>
-        <li><a class="dropdown-item" href="#">Asst. Proffessor</a></li>
+        <li><a class="dropdown-item" href="member_sort_c.php?Category=Lecturer">Lecturer</a></li>
+        <li><a class="dropdown-item" href="member_sort_c.php?Category=Professor">Professor</a></li>
+        <li><a class="dropdown-item" href="member_sort_c.php?Category=Asst. Professor">Asst. Professor</a></li>
+        <li><a class="dropdown-item" href="members.php">All</a></li>
         
         
     </ul>
-    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</div>
+
+
 </body>
 </html>

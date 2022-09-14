@@ -14,6 +14,7 @@
       </ul>
       <form class="d-flex">
       <input class="form-control me-2 " style="border-radius:20px;" type="search" placeholder="Search" aria-label="Search">
+      <button type="submit" class=" btn rounded-pill btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:50px;">Go</button>
       </form>
     </div>
   </div>

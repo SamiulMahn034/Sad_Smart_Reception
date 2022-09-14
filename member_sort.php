@@ -20,12 +20,15 @@ $conn = mysqli_connect('localhost','root','','smart reception');
       <div class="col-md-2" style="background-image: linear-gradient(to right ,#fc604f , #f08d20); height:920px;">
             <?php include "sidebar.php" ?>
       </div>
-      <div class="col-md-10" style="width: 1200px;">
+      <div class="col-md-10">
   
       <div class="container slider" style="margin-top:100px;">
                   <?php 
-
-                $sql ="SELECT id, image, Name ,Dept,Category from `faculty/member` ";
+                if(isset($_GET['Dept']) || isset($_GET['Category'])){
+                    $Dept=$_GET['Dept'];
+                    
+                   
+                $sql ="SELECT id, image, Name ,Dept,Category from `faculty/member` where Dept='$Dept'  ";
                 $data = mysqli_query($conn, $sql);
                 $check_result= mysqli_num_rows($data)> 0;
                 if($check_result){
@@ -33,7 +36,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                   {
                       ?>
 
-                  <div class="card" style="height:500px; background: linear-gradient(to top, white 70%, lightgray 50%); margin-left:40px;">
+                  <div class="card" style="height:500px; background: linear-gradient(to top, white 70%, gray 50%); margin-left:40px;">
 
                  <center><a href="apnt.php?id=<?php echo $rows ['id']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:200px;width:200px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
                   <div class="card-body" style="color:black;text-align:center;">
@@ -55,6 +58,7 @@ else{
   ?>	
 <h2  style="color:white;font-size:35px;">Datas are  currently not available.</h2> 
 <?php
+}
 }
 ?>	
   </div>

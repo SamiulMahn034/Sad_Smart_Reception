@@ -31,7 +31,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                     ?>
     <br><br>
     <div class="container">
-        <div class="row shadow-lg  mb-5 bg-body rounded" style="border-right: solid orange 15px">
+        <div class="row shadow-lg  mb-5 bg-body rounded">
             <div class="col-md-6 col-12" style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:430px;height:500px;">
             <br><br>
             <div class="card" style="height:400px;width:350px; background: linear-gradient(to top, white 50%, lightgray 50%);margin-left:30px; ">
@@ -52,32 +52,48 @@ $conn = mysqli_connect('localhost','root','','smart reception');
             
             <div class="col-md-6 col-12">
             <br><br>
-            <a href="apnt.php"></a><button class=" btn  btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;">Profile</button></a>
-     <a href="apnt_t.php?id=<?php echo $rows ['id']?>">
-     <button class=" btn  btn-dark  fw-bold "  style="background-color:white;width:200px;color:black;">Time Slot</button>
+            <a href="apnt.php?id=<?php echo $rows ['id'] ?>"><button
+            class=" btn  btn-dark  fw-bold "  style="background-color:white;width:200px;color:black;">Profile</button></a>
+      <button class=" btn  btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;" >Time Slot</button>
             <form action="visitor.php" method="GET">
-     </a> 
 
 
 
             
             <input type="hidden" name="name" value="<?php echo $rows ['Name'] ?>" >
-                <h1>Name:<?php echo $rows ['Name'] ?></h1>
+                
                 <input type="hidden" name="Cat" value="<?php echo $rows ['Category'] ?>" >
-                <h4><?php echo $rows ['Category'] ?></h4>
+                
 
-            
+            <br>
             <input type="hidden" name="Dept" value="<?php echo $rows ['Dept'] ?>" >
-                <h4>Department:<?php echo $rows ['Dept'] ?></h4>
+               
                 
-            
-            <input type="hidden" name="Dept" value="<?php echo $rows ['Room_Number'] ?>" >
-                <h4>Room Number:<?php echo $rows ['Room_Number'] ?></h4>
-                
-           
+            <br>
+            <div class="form-check">
+  <input class="form-check-input" type="radio" name="Slot" id="flexRadioDefault1" value="<?php echo $rows ['Slot_1'] ?>">
+  <label class="form-check-label" for="flexRadioDefault1">
+  <?php echo $rows ['Slot_1'] ?>
+  </label>
+</div>
+            <div class="form-check">
+  <input class="form-check-input" type="radio" name="Slot" id="flexRadioDefault1" value="<?php echo $rows ['Slot_2'] ?>">
+  <label class="form-check-label" for="flexRadioDefault1">
+  <?php echo $rows ['Slot_2'] ?>
+  </label>
+</div>
+            <div class="form-check">
+  <input class="form-check-input" type="radio" name="Slot" id="flexRadioDefault1" value="<?php echo $rows ['Slot_3'] ?>">
+  <label class="form-check-label" for="flexRadioDefault1">
+  <?php echo $rows ['Slot_3'] ?>
+  </label>
+</div>
+
 
             <br><br>
-
+            <center>
+            <input type="submit" class=" btn rounded-pill btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;">
+            </center>
             </form>
             </div>
         </div>
