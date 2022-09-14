@@ -13,7 +13,7 @@ include('includes/sidebar.php');?>
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class=" text-dark"  style="margin-left:50px;">Dashboard</h1>
             
             <?php 
               if(isset($_SESSION['status'])){
@@ -38,7 +38,7 @@ include('includes/sidebar.php');?>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active"">Dashboard v1</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -51,32 +51,35 @@ include('includes/sidebar.php');?>
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
+        <div class="row" style="margin-left:50px;">
 
-                <p>New Orders</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <?php 
+              $sql ="SELECT count(id) from  `appoinment`";
+              $data = mysqli_query($conn, $sql);
+              $check_result= mysqli_num_rows($data)> 0;
+                if($check_result){
+                  while( $rows = mysqli_fetch_array( $data ) ) 
+                      {
+                         ?>
+                <h3><?php echo $rows ['count(id)']?></h3>
 
-                <p>Total Sales</p>
+                <p>Total Appoinments</p>
+                <?php
+    }
+}
+else{
+   die("Can not execute query");
+}
+?>
               </div>
               <div class="icon">
-              <i class="fas fa-dollar-sign"></i>
+              <i class="fas fa-calendar-check"></i>
+              
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -86,9 +89,24 @@ include('includes/sidebar.php');?>
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+              <?php 
+              $sql ="SELECT count(id) from  `visistor`";
+              $data = mysqli_query($conn, $sql);
+              $check_result= mysqli_num_rows($data)> 0;
+                if($check_result){
+                  while( $rows = mysqli_fetch_array( $data ) ) 
+                      {
+                         ?>
+                <h3><?php echo $rows ['count(id)']?></h3>
 
-                <p>User Registrations</p>
+                <p>Visitors</p>
+                <?php
+    }
+}
+else{
+   die("Can not execute query");
+}
+?>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
@@ -111,7 +129,7 @@ include('includes/sidebar.php');?>
                          ?>
                            <h3><?php echo $rows ['count(id)']?></h3>
 
-                            <p>Visitors</p>
+                            <p>Faculty Members</p>
                 <?php
     }
 }
@@ -123,7 +141,7 @@ else{
               <div class="icon">
               <i class="far fa-user"></i>
               </div>
-              <a href="visitors_read.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="member_read.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

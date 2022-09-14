@@ -131,7 +131,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     </div>
 <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Product List:</h3>
+                <h3 class="card-title">Member List:</h3>
 
                 <a href="#" data-toggle="modal" data-target="#ProModal" class="btn btn-success float-right" >Add Member</a>
               </div>
