@@ -30,11 +30,11 @@
     <link rel="stylesheet" href="assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="assets/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
    <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="../../imeges/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../../imeges/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../../imeges/favicon/favicon-16x16.png">
-<link rel="manifest" href="../../imeges/favicon/site.webmanifest">
-<link rel="mask-icon" href="../../imeges/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../imeges/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../../../imeges/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../../imeges/favicon/favicon-16x16.png">
+<link rel="manifest" href="../../../imeges/favicon/site.webmanifest">
+<link rel="mask-icon" href="../../../imeges/favicon/safari-pinned-tab.svg" color="#5bbad5">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">

@@ -1,7 +1,7 @@
 
 <?php 
 include('auth.php');
-// session_start();
+
 include('includes/header.php');
 include('includes/topbar.php');
 include('includes/sidebar.php');
@@ -101,7 +101,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-              <li class="breadcrumb-item active">View Direction</li>
+              <li class="breadcrumb-item active">View Appoinments</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -109,9 +109,9 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     </div>
 <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Direction List:</h3>
-
-                <a href="#" data-toggle="modal" data-target="#ProModal" class="btn btn-success float-right rounded-pill" style=" background-image: linear-gradient(to right ,#fc604f , #f08d20);width:150px;" >Add Direction</a>
+                <h3 class="card-title">Appointment List:</h3>
+<!-- 
+                <a href="#" data-toggle="modal" data-target="#ProModal" class="btn btn-success float-right" >Add Direction</a> -->
               </div>
 
               <!-- /.card-header -->
@@ -120,19 +120,24 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                   <thead>
                   <tr>
                     <th>ID</th>
-                    <th>Room_Name</th>
-                    <th>Room_Number</th>
-                    <th>Direction</th>
-                    <th>Map</th>
+                    <th>Name</th>
+                    <th>Phone Number</th>
+                    <th>Visitor Type</th>
+                    <th>Faculty Name</th>
+                    <th>Department</th>
+                    <th>Category</th>
+                    <th>Slot</th>
+                    <th>Booking Time</th>
+                    <th>Status</th>
                     
-                    <th>Actions</th>
+                    
                   </tr>
                   </thead>
 
                   <tbody>
                   <tr>
                   <?php 
-$sql ="SELECT * from direction";
+$sql ="SELECT * from appoinment";
 $data = mysqli_query($conn, $sql);
 $check_result= mysqli_num_rows($data)> 0;
 if($check_result){
@@ -140,15 +145,19 @@ if($check_result){
   {
       ?>
                     <td><?php echo $rows ['ID']?></td>
-                    <td><?php echo $rows ['Room_Name']?></td>
-                    <td><?php echo $rows ['Room_Number']?>
+                    <td><?php echo $rows ['Visitor Name']?></td>
+                    <td><?php echo $rows ['Visitor_Number']?>
                     </td>
                   
-                    <td><?php echo $rows ['Direction']?></td>
-                    <td><img style="width:200px;" src="../../imeges/<?php echo $rows ['Map']?>"></td>
+                    <td><?php echo $rows ['visitor_type']?></td>
+                    <td><?php echo $rows ['Faculty Name']?></td>
+                    <td><?php echo $rows ['Dept']?></td>
+                    <td><?php echo $rows ['Category']?></td>
+                    <td><?php echo $rows ['Slot']?></td>
+                    <td><?php echo $rows ['appointment_time']?></td>
+                    <td><?php echo $rows ['status']?></td>
                     
-                    <td><a href="direction_update.php?id=<?php echo $rows ['ID']?>"  class="btn btn-primary rounded-pill" style=" background-image: linear-gradient(to right ,#fc604f , #f08d20);width:100px;"  >Update</a>
-                    <button data-toggle="modal" data-target="#delModal" type="button" value="<?php echo $rows ['ID']?>"  class="btn btn-danger deletebtn rounded-pill" style="width:100px;" value >Delete</button></td>
+                   
                   </tr>
                   <?php
     }

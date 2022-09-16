@@ -1,13 +1,13 @@
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand "  style="background:black; color:white;" >
+  <nav class="main-header navbar navbar-expand  sticky-top"  style="background:black; color:white;" >
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars" style="color:white;"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.php" class="nav-link">Home</a>
+        <a href="index.php" class="nav-link" style="color:white;">Home</a>
       </li>
   
 
@@ -43,9 +43,8 @@
 
   <div class="dropdown-menu">
    
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <form action="./config/code_loging.php" method="POST" >
+
+    <form action="./config/code_log_in.php" method="POST" >
       <button type="submit" name="logout" class="dropdown-item">Log Out</button>
     </form>
   </div>

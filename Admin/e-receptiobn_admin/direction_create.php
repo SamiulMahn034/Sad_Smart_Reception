@@ -1,7 +1,7 @@
 
 <?php 
-// include('auth.php');
-session_start();
+include('auth.php');
+
 include('includes/header.php');
 include('includes/topbar.php');
 include('includes/sidebar.php');
@@ -66,8 +66,8 @@ $conn = mysqli_connect('localhost','root','','smart reception');
         </div>
 
       
-        <a href="direction_read.php"><button type="button" class="btn btn-secondary" > View Direction</button></a>
-        <button type="submit" name="submit" class="btn btn-primary">Add Direction</button>
+        <a href="direction_read.php"><button type="button" class="btn btn-secondary rounded-pill" style="background-color: black;width:150px;"  > View Direction</button></a>
+        <button type="submit" name="submit" class="btn rounded-pill fw-bold"  style=" background-image: linear-gradient(to right ,#fc604f , #f08d20);width:150px;">Add Direction</button>
       </div>
 
       </form>

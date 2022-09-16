@@ -1,5 +1,5 @@
 <?php
-// include('auth.php');
+include('auth.php');
 include('includes/header.php');
 include('includes/db_connect.php');
 include('includes/topbar.php');
@@ -13,7 +13,7 @@ include('includes/sidebar.php');?>
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class=" text-dark"  style="margin-left:50px;">Dashboard</h1>
+            <h1 class=" text-dark"  ">Dashboard</h1>
             
             <?php 
               if(isset($_SESSION['status'])){
@@ -51,7 +51,7 @@ include('includes/sidebar.php');?>
     <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
-        <div class="row" style="margin-left:50px;">
+        <div class="row" >
 
           <!-- ./col -->
           <div class="col-lg-3 col-6">
@@ -59,7 +59,7 @@ include('includes/sidebar.php');?>
             <div class="small-box bg-success">
               <div class="inner">
               <?php 
-              $sql ="SELECT count(id) from  `appoinment`";
+              $sql ="SELECT count(id) from  `appoinment` WHERE status='Pending'";
               $data = mysqli_query($conn, $sql);
               $check_result= mysqli_num_rows($data)> 0;
                 if($check_result){
@@ -68,7 +68,7 @@ include('includes/sidebar.php');?>
                          ?>
                 <h3><?php echo $rows ['count(id)']?></h3>
 
-                <p>Total Appoinments</p>
+                <p>Pending Appoinments</p>
                 <?php
     }
 }
@@ -81,7 +81,7 @@ else{
               <i class="fas fa-calendar-check"></i>
               
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="appointment_read.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -111,7 +111,7 @@ else{
               <div class="icon">
                 <i class="ion ion-person-add"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="visitor_read.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -120,7 +120,7 @@ else{
             <div class="small-box bg-danger">
               <div class="inner">
               <?php 
-              $sql ="SELECT count(id) from  `faculty/member`";
+              $sql ="SELECT count(id) from  `faculty/member` where Role='F'";
               $data = mysqli_query($conn, $sql);
               $check_result= mysqli_num_rows($data)> 0;
                 if($check_result){

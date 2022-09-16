@@ -93,14 +93,23 @@ $conn = mysqli_connect('localhost','root','','smart reception');
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput1">Password</label>
-            <input name="password" type="text"  class="form-control" id="exampleFormControlInput1" placeholder="">
+            <input name="password" type="password"  class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Role</label>
+            <select name="role" class="form-select" aria-label="Default select example">
+              <option selected>Open this select menu</option>
+              <option value="F">Faculty</option>
+              <option value="A">Admin</option>
+              
+            </select>
         </div>
 
 
 
       
-        <a href="member_read.php"><button type="button" class="btn btn-secondary" > View Members</button></a>
-        <input type="submit" name="submit" class="btn btn-primary" value="Add Members">
+        <a href="member_read.php"><button type="button" class="btn btn-secondary rounded-pill" style="background-color: black;width:150px;"   > View Members</button></a>
+        <input style=" background-image: linear-gradient(to right ,#fc604f , #f08d20);width:150px;" type="submit" name="submit" class="btn btn-primary rounded-pill" value="Add Members">
       </div>
 
       </form>
