@@ -11,7 +11,7 @@
         <a class="nav-link  text-white " style="padding-left:50px;" href="Academic_info.php">Academics</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link  text-white " style="padding-left:50px;" href="log_in.php">Log in(Officials)</a>
+        <a class="nav-link  text-white " style="padding-left:50px;" href="log_in.php">Log in</a>
         </li>
         
       </ul>

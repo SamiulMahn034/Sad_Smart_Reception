@@ -21,7 +21,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     }
 </style>
 </head>
-<body >
+<body style="background: linear-gradient(to left, white 80%, #f08e1f 20%  )" >
     <div class="container" >
     <br><br><br><br>
     <?php 
@@ -44,7 +44,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
         <div class="col-md-6">
             <div style="margin-left:100px;">
                                 
-            <h2 style="text-decoration:underline; text-decoration-color:orange;">Log in (officials)</h2>
+            <h2 style="text-decoration:underline; text-decoration-color:orange;">Log in </h2>
                 <br>
                 <form action="Admin/e-receptiobn_admin/config/code_log_in.php" method="post">
                       

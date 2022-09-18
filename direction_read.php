@@ -15,7 +15,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <title>Get a smart direction</title>
 </head>
-<body style="background: linear-gradient(to left, white 80%, #f08d20 20%  )" >
+<body style="background: linear-gradient(to left, white 80%, #f08e1f 20%  )" >
 <?php
                     if (isset($_GET['Room_Name'])){
                         

@@ -15,9 +15,9 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     
     <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
 </head>
-<body>
+<body >
     <div class="row">    
-      <div class="col-md-2" style="background-image: linear-gradient(to right ,#fc604f , #f08d20); height:650px;">
+      <div class="col-md-2" style="background-color:#f08e1f; height:650px;">
             <?php include "sidebar.php" ?>
       </div>
       <div class="col-md-10" style="width: 1200px;">

@@ -18,7 +18,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <div class="container">
         <div class="row">
             
-            <div class="col-md-12">
+            <div class="col-md-12" >
             <?php 
                 
                 $sql ="SELECT title,description,web from `search` ";
@@ -28,7 +28,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                 while( $rows = mysqli_fetch_array( $data ) ) 
                 {
                     ?>
-            <div class="card mt-2">
+            <div class="card mt-2" style="margin-left:123px;">
 
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $rows['title']?></h5>
