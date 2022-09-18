@@ -61,7 +61,7 @@ include "header.php" ?>
 
             
             <br>
-            <a href="direction_read.php?Room_Name=Admission" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Admission Office</a>
+            <a href="direction_read.php?Room_Name=Admission Office" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Admission Office</a>
 
             <br>
             <a href="direction_read.php?Room_Name=Library" class=" btn rounded-pill btn-dark shadow fw-bold"style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:250px;">Library</a>
