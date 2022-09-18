@@ -21,8 +21,8 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     }
 </style>
 </head>
-<body style="background-image: linear-gradient(to right ,#fc604f  , #f08d20 );">
-    <div class="container">
+<body >
+    <div class="container" >
     <br><br><br><br>
     <?php 
               if(isset($_SESSION['status'])){
@@ -44,12 +44,12 @@ $conn = mysqli_connect('localhost','root','','smart reception');
         <div class="col-md-6">
             <div style="margin-left:100px;">
                                 
-            <h2 style="text-decoration:underline; text-decoration-color:orange;">Log in (offcials)</h2>
+            <h2 style="text-decoration:underline; text-decoration-color:orange;">Log in (officials)</h2>
                 <br>
                 <form action="Admin/e-receptiobn_admin/config/code_log_in.php" method="post">
                       
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">User Name:</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">User_Name:</label>
                             <div class="col-sm-10">
                             <input style="border:3px orange solid; width:350px;" name="username" type="mail" class="form-control" id="inputPassword">
                             </div>
@@ -57,7 +57,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
 
                   
                         <div class="mb-3 row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">Password:</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label fw-bold">Password:</label>
                             <div class="col-sm-10">
                             <input  style="border:3px orange solid; width:350px;" name="password" type="password" class="form-control" id="inputPassword">
                             </div>

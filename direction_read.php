@@ -15,7 +15,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <title>Get a smart direction</title>
 </head>
-<body style="background-image: linear-gradient(to right ,#fc604f , #f08d20);">
+<body >
 <?php
                     if (isset($_GET['Room_Name'])){
                         
@@ -32,15 +32,17 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <br><br>
    
         <div class="container">
-            <div class="row">
+            <br><br><br><br>
+            <div class="row" >
                 <div class="col-md-6 col-12">
-                <br><br><br><br><br><br>
+                <!-- <br><br><br><br> -->
                 <img src="imeges/<?php echo $rows ['Map'] ?>" style="width:100%;" alt="">
                 </div>
-                <div class="col-md-6 col-12">
-                <br><br><br><br><br><br><br><br>
-                <div style=" display:flex; flex-direction:column; align-items: center;
-                    "  >
+                <div class="col-md-6 col-12" style=" border-top-style: solid ; border-right-style: solid ; border-bottom-style: solid ; border-color:orange; align-items:center">
+                <!-- <br><br><br><br><br><br> -->
+                <div style=" display:flex; flex-direction:column; align-items: center;"
+                      >
+                     <br><br>
                      <h2>Which place are you looking for?</h2>
             <hr>
             

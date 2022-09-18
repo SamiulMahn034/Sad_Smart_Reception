@@ -21,7 +21,7 @@ if(!$conn){
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
     <title>Get a smart direction</title>
 </head>
-<body style="background-image: linear-gradient(to right ,#fc604f , #f08d20);">
+<body>
 
     <br><br>
    
@@ -39,15 +39,17 @@ if(!$conn){
                             
                     
                     ?>
-            <div class="row">
+                    <br><br><br><br>
+            <div class="row" >
                 <div class="col-md-6 col-12">
-                <br><br><br><br><br><br>
+                <!-- <br><br><br><br> -->
                 <img src="imeges/<?php echo $rows ['Map'] ?>" style="width:100%;" alt="">
                 </div>
-                <div class="col-md-6 col-12">
-                <br><br><br><br><br><br><br><br>
-                <div style=" display:flex; flex-direction:column; align-items: center; h3background-color:white
+                <div class="col-md-6 col-12" style=" border-top-style: solid ; border-right-style: solid ; border-bottom-style: solid ; border-color:orange; align-items:center">
+                <!-- <br><br><br><br> -->
+                <div style=" display:flex; flex-direction:column; align-items: center; h3background-color:white;
                     "  >
+                     <br><br>
                      <h2>Which place are you looking for?</h2>
             <hr>
             <center>
@@ -68,7 +70,7 @@ if(!$conn){
                 <h1><?php echo $rows ['Room_Name'] ?></h1>
 
             <br>
-                <h3><?php echo $rows ['Direction'] ?></h3>
+                <center><h3><?php echo $rows ['Direction'] ?></h3></center>
             <br>
         
             <br><br><br><br>

@@ -14,9 +14,10 @@ $conn = mysqli_connect('localhost','root','','smart reception');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academics</title>
 </head>
-<body>
+<body style="background: linear-gradient(to left, white 80%, #f08d20 20%  )">
     <div class="container">
         <div class="row">
+            
             <div class="col-md-12">
             <?php 
                 
