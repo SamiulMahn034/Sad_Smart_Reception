@@ -20,7 +20,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                     if (isset($_GET['id'])){
                         
                         $id= $_GET['id'];
-                        $sql= "SELECT * FROM `faculty/member` WHERE id='$id'";
+                        $sql= "SELECT * FROM `faculty/member` WHERE ID='$id'";
                         $data = mysqli_query($conn, $sql);
                         $check_result= mysqli_num_rows($data)> 0;
                         if($check_result){
@@ -36,7 +36,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
             <br><br>
             <div class="card" style="height:400px;width:350px; background: linear-gradient(to top, white 50%, lightgray 50%);margin-left:30px; ">
 
-                    <center><a href="apnt.php?id=<?php echo $rows ['id']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:250px;width:250px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
+                    <center><a href="apnt.php?id=<?php echo $rows ['ID']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:250px;width:250px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
                     <div class="card-body" style="color:black;text-align:center;">
 
                             <span><?php echo $rows ['Name']?></span>
@@ -50,9 +50,9 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                     </div>
                 </div>
             
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12" style="margin-left:80px;">
             <br><br>
-            <a href="apnt.php?id=<?php echo $rows ['id'] ?>"><button
+            <a href="apnt.php?id=<?php echo $rows ['ID'] ?>"><button
             class=" btn  btn-dark  fw-bold "  style="background-color:white;width:200px;color:black;">Profile</button></a>
       <button class=" btn  btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;" >Time Slot</button>
             <form action="visitor.php" method="GET">
@@ -71,29 +71,29 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                 
             <br>
             <div class="form-check">
-  <input class="form-check-input" type="radio" name="Slot" id="flexRadioDefault1" value="<?php echo $rows ['Slot_1'] ?>">
-  <label class="form-check-label" for="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="Slot" style="font-size:20px;" id="flexRadioDefault1" value="<?php echo $rows ['Slot_1'] ?>">
+  <label class="form-check-label fw-bold" style="font-size:20px;" for="flexRadioDefault1">
   <?php echo $rows ['Slot_1'] ?>
   </label>
 </div>
             <div class="form-check">
-  <input class="form-check-input" type="radio" name="Slot" id="flexRadioDefault1" value="<?php echo $rows ['Slot_2'] ?>">
-  <label class="form-check-label" for="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="Slot" style="font-size:20px;" id="flexRadioDefault1" value="<?php echo $rows ['Slot_2'] ?>">
+  <label class="form-check-label fw-bold" style="font-size:20px;" for="flexRadioDefault1">
   <?php echo $rows ['Slot_2'] ?>
   </label>
 </div>
             <div class="form-check">
-  <input class="form-check-input" type="radio" name="Slot" id="flexRadioDefault1" value="<?php echo $rows ['Slot_3'] ?>">
-  <label class="form-check-label" for="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="Slot" style="font-size:20px;" id="flexRadioDefault1" value="<?php echo $rows ['Slot_3'] ?>">
+  <label class="form-check-label fw-bold" style="font-size:20px;" for="flexRadioDefault1">
   <?php echo $rows ['Slot_3'] ?>
   </label>
 </div>
 
 
             <br><br>
-            <center>
-            <input type="submit" class=" btn rounded-pill btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;">
-            </center>
+            
+            <input type="submit" class=" btn rounded-pill btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;margin-left:100px;">
+            
             </form>
             </div>
         </div>

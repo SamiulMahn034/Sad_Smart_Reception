@@ -8,7 +8,10 @@
     <a class="nav-link active  text-white "  aria-current="page" href="index.php">Home</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-        <a class="nav-link  text-white " style="padding-left:50px;" href="#">Log in(Officials)</a>
+        <a class="nav-link  text-white " style="padding-left:50px;" href="Academic_info.php">Academics</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link  text-white " style="padding-left:50px;" href="log_in.php">Log in(Officials)</a>
         </li>
         
       </ul>

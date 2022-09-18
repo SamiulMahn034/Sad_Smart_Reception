@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
     $email= $_POST['email'];
     $number= $_POST['number'];
     $visitor_type= $_POST['visitor_type'];
-
+    mysqli_query($conn,"INSERT INTO `visistor`( `Name`, `Phone Number`, `Type`) VALUES ('$username','$number','$visitor_type')");
     $sql= "INSERT INTO `appoinment`( `Visitor Name`, `Visitor_Number`,`visitor_type` ,`Faculty Name`, `Dept`, `Category`, `Slot`) VALUES('$username','$number','$visitor_type','$name','$Dept','$Cat','$Slot')";
     if(mysqli_query($conn,$sql) == TRUE){
       
@@ -43,10 +43,10 @@ if(isset($_POST['submit'])){
       
         <div class="row shadow-lg  mb-5 bg-body rounded" style="background:var(--custom); align-items:center;height: 500px;">
         
-          <div class="col-md-6" style="background-image: linear-gradient(to top ,#fc604f  , #f08d20 );height:500px; border-radius: 0px 95% 60% 0px ;">
+          <div class="col-md-6" style="background-image: linear-gradient(to top ,#fc604f  , #f08d20 );height:500px; border-radius: 0px 0% 0% 0px ;">
           <br><br><br><br>
             <div style="margin-left:100px;">
-            <h2 style="text-decoration:underline; text-decoration-color:orange;">Appoinment Booked</h2>
+            <h2 style="text-decoration:underline;color:white; text-decoration-color:orange;">Appoinment Booked</h2>
                 <br>
               Name: <?php echo $name ?>;
               <br>

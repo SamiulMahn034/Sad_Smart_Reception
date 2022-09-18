@@ -8,7 +8,7 @@
 </head>
 <body >
 <div >
-<div style="margin-top:300px; " class="container">
+<div style="margin-top:200px; " class="container">
 <h3>Get your own choice</h3>
     <div class="input-group mb-3">
     
@@ -26,7 +26,7 @@
  
     </div>
     <div class="input-group mb-3">
-    <button class="btn btn-light dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">Faculty</button>
+    <button class="btn btn-light dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width:130px;">Faculty<?php echo "   "?></button>
     <ul class="dropdown-menu">
         <li><a class="dropdown-item" href="member_sort_c.php?Category=Lecturer">Lecturer</a></li>
         <li><a class="dropdown-item" href="member_sort_c.php?Category=Professor">Professor</a></li>

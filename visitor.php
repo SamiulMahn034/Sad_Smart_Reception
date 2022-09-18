@@ -99,7 +99,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                        </form>
             </div>
             </div>
-            <div class="col-md-6" style="background-image: linear-gradient(to top ,#fc604f  , #f08d20 );height:500px; border-radius:95% 0px 0px 60%;">
+            <div class="col-md-6" style="background-image: linear-gradient(to top ,#fc604f  , #f08d20 );height:500px; border-radius:0% 0px 0px 0%;">
             <br><br><br>
                 <img src="Admin/e-receptiobn_admin/imeges/banner_vistor.jpg" style="height:400px; margin-left:150px;" alt="">
             </div>

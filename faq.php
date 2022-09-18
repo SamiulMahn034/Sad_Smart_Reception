@@ -32,6 +32,18 @@
                         <div class="accordion-body">UIU offers 3 trimesters in a year: Spring, Summer & Fall.  In general, these trimesters start in February, June & October respectively.</div>
                         </div>
                     </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            What is the admission fee?
+                        </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">1.Admission fee taka 15,000.00 (Non Refundable) <br>
+                        2.Caution Money for ID Card Tk. 2000.00 (Refundable) payable at the time of taking admission.</div>
+                        </div>
+                    </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="flush-headingTwo">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
@@ -40,6 +52,16 @@
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">Yes, appeared students can apply to any program of UIU. If you qualify for the Admission Test, then you must have to submit the result of the HSC exam during Admission Time. If your result is not published, you will not be allowed to get the admission and the Admission Form fee will not be refunded.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                         Is there any siblings facilities?
+                        </button>
+                        </h2>
+                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Siblings upon completion of registration will be eligible for 20% tuition fee waiver each.</div>
                         </div>
                     </div>
                     <div class="accordion-item">

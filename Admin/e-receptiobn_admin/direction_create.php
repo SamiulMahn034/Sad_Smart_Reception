@@ -60,10 +60,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
             <label for="exampleFormControlFile1">Input image</label>
             <input name="file" type="file" class="form-control-file" id="exampleFormControlFile1">
         </div>
-        <div class="form-group">
-            <label for="exampleFormControlFile1">Voice</label>
-            <input name="file1" type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
+
 
       
         <a href="direction_read.php"><button type="button" class="btn btn-secondary rounded-pill" style="background-color: black;width:150px;"  > View Direction</button></a>

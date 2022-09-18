@@ -20,7 +20,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
       <div class="col-md-2" style="background-image: linear-gradient(to right ,#fc604f , #f08d20); height:920px;">
             <?php include "sidebar.php" ?>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-10" style="width: 1200px;">
   
       <div class="container slider" style="margin-top:100px;">
                   <?php 

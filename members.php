@@ -17,7 +17,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
 </head>
 <body>
     <div class="row">    
-      <div class="col-md-2" style="background-image: linear-gradient(to right ,#fc604f , #f08d20); height:920px;">
+      <div class="col-md-2" style="background-image: linear-gradient(to right ,#fc604f , #f08d20); height:650px;">
             <?php include "sidebar.php" ?>
       </div>
       <div class="col-md-10" style="width: 1200px;">
@@ -25,7 +25,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
       <div class="container slider" style="margin-top:100px;">
                   <?php 
 
-                $sql ="SELECT id, image, Name ,Dept,Category from `faculty/member` ";
+                $sql ="SELECT id, image, Name ,Dept,Category from `faculty/member` WHERE Role='F' ";
                 $data = mysqli_query($conn, $sql);
                 $check_result= mysqli_num_rows($data)> 0;
                 if($check_result){
@@ -38,7 +38,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                  <center><a href="apnt.php?id=<?php echo $rows ['id']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:200px;width:200px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
                   <div class="card-body" style="color:black;text-align:center;">
 
-                            <span><?php echo $rows ['Name']?></span>
+                            <span class="fw-bold" ><?php echo $rows ['Name']?></span>
                             <br>
                             <span><?php echo $rows ['Dept']?></span>
                             <br>

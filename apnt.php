@@ -36,7 +36,7 @@ $conn = mysqli_connect('localhost','root','','smart reception');
             <br><br>
             <div class="card" style="height:400px;width:350px; background: linear-gradient(to top, white 50%, lightgray 50%);margin-left:30px; ">
 
-                    <center><a href="apnt.php?id=<?php echo $rows ['id']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:250px;width:250px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
+                    <center><a href="apnt.php?id=<?php echo $rows ['ID']?>"> <img src="Admin/e-receptiobn_admin/imeges/faculty_members/<?php echo $rows ['image']?>" class="card-img-center" style="height:250px;width:250px; border-radius:100%;margin-top:20px;" alt="..."></a></center>
                     <div class="card-body" style="color:black;text-align:center;">
 
                             <span><?php echo $rows ['Name']?></span>
@@ -50,11 +50,11 @@ $conn = mysqli_connect('localhost','root','','smart reception');
                     </div>
                 </div>
             
-            <div class="col-md-6 col-12">
+            <div class="col-md-6 col-12 " style="margin-left:80px;">
             <br><br>
             <a href="apnt.php"></a><button class=" btn  btn-dark shadow fw-bold"  style="background-image: linear-gradient(to right ,#fc604f , #f08d20);width:200px;">Profile</button></a>
-     <a href="apnt_t.php?id=<?php echo $rows ['id']?>">
-     <button class=" btn  btn-dark  fw-bold "  style="background-color:white;width:200px;color:black;">Time Slot</button>
+     <a href="apnt_t.php?id=<?php echo $rows ['ID']?>">
+     <button class=" btn  btn-dark  fw-bold "  style="background-color:white;width:200px;color:black;">Time Slot</button><br><br>
             <form action="visitor.php" method="GET">
      </a> 
 
@@ -62,17 +62,17 @@ $conn = mysqli_connect('localhost','root','','smart reception');
 
             
             <input type="hidden" name="name" value="<?php echo $rows ['Name'] ?>" >
-                <h1>Name:<?php echo $rows ['Name'] ?></h1>
+                <h3 class="fw-bold"><?php echo $rows ['Name'] ?></h3>
                 <input type="hidden" name="Cat" value="<?php echo $rows ['Category'] ?>" >
-                <h4><?php echo $rows ['Category'] ?></h4>
+                <h5><?php echo $rows ['Category'] ?></h5>
 
             
             <input type="hidden" name="Dept" value="<?php echo $rows ['Dept'] ?>" >
-                <h4>Department:<?php echo $rows ['Dept'] ?></h4>
+                <h5>Department:<?php echo" " ?><?php echo $rows ['Dept'] ?></h5>
                 
             
             <input type="hidden" name="Dept" value="<?php echo $rows ['Room_Number'] ?>" >
-                <h4>Room Number:<?php echo $rows ['Room_Number'] ?></h4>
+                <h5>Room Number:<?php echo" " ?><?php echo $rows ['Room_Number'] ?></h5>
                 
            
 
