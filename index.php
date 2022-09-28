@@ -27,7 +27,7 @@
    <div style="margin-top:40px;"class="row">
     <div class="col-md-4 col-12">
       <div style="display:flex; flex-direction:column">
-              <div style="width:250px">
+              <div style="width:250px;margin-left:45px;">
               <span >
                       Get an appointment easily on suitable time. 
               </span>
@@ -42,7 +42,7 @@
     </div>
     <div  class="col-md-4 col-12">
       <div style="display:flex; flex-direction:column">
-              <div style="width:250px">
+              <div style="width:250px;margin-left:45px;">
               <span >
                       Get clear direction of any places of our campus.
               </span>
@@ -54,8 +54,8 @@
     </div>
     <div class="col-md-4 col-12">
     <div style="display:flex; flex-direction:column">
-            <div style="width:250px">
-            <span >
+            <div style="width:250px;margin-left:45px;">
+            <span>
                     Get Answer of some frequently asked questions.
             </span>
             </div>
