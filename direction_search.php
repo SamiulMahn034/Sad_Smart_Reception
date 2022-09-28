@@ -45,7 +45,7 @@ if(!$conn){
                 <!-- <br><br><br><br> -->
                 <img src="imeges/<?php echo $rows ['Map'] ?>" style="width:100%;" alt="">
                 </div>
-                <div class="col-md-6 col-12" style=" border-top-style: solid ; border-right-style: solid ; border-bottom-style: solid ; border-color:orange; align-items:center">
+                <div class="col-md-6 col-12" style=" border-top-style: solid ; border-right-style: solid ; border-bottom-style: solid ; border-color:orange; align-items:center;">
                 <!-- <br><br><br><br> -->
                 <div style=" display:flex; flex-direction:column; align-items: center; h3background-color:white;
                     "  >

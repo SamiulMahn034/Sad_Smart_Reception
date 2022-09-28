@@ -8,8 +8,13 @@
 </head>
 <body >
 <div >
+<<<<<<< HEAD
 <div style="margin-top:105px; " class="container">
 <h5>Filter by</h5>
+=======
+<div style="margin-top:150px; " class="container">
+<h4>Filter By:</h4>
+>>>>>>> 672bdf6ac92882bb2a61e9cdb4438f1d5c0a3f34
     <div class="input-group mb-3">
     
     <button class="btn btn-light dropdown-toggle fw-bold" type="button" data-bs-toggle="dropdown" aria-expanded="false">Department</button>
